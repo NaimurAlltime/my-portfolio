@@ -1,4 +1,5 @@
 import { BiDownload } from "react-icons/bi";
+import Typed from "react-typed";
 import Mongodb from "../../assets/mongodb.svg";
 import Nodejs from "../../assets/nodejs.svg";
 import Profile from "../../assets/profile1.png";
@@ -24,9 +25,20 @@ const Header = () => {
           </h1> */}
           {/* dark:text-[#224cff] */}
           <div className="flex items-center justify-center text-slate-700 shadow-lg  dark:bg-[#224cff10] dark:text-neutral-100 rounded-full">
-            <p className="text-3xl 2xl:text-5xl font-bold pr-3 py-2 pb-2 text-center">
-              Full Stack Developer
-            </p>
+            {/* "Full Stack Developer" */}
+            <Typed
+              className="text-3xl 2xl:text-5xl font-bold pr-3 py-2 pb-2 text-center"
+              typeSpeed={60}
+              backSpeed={35}
+              loop
+              strings={[
+                "Full Stack Developer",
+                "Frontend Developer ",
+                "React Js Developer",
+                "MERN Stack Developer",
+                "JavaScript Developer",
+              ]}
+            />
           </div>
         </div>
 
