@@ -1,55 +1,79 @@
-import { Link } from "react-router-dom";
+import { AiOutlineClose } from "react-icons/ai";
+import { BiMenu } from "react-icons/bi";
+import { FiSun } from "react-icons/fi";
+import { MdOutlineNightlight } from "react-icons/md";
 
-const Navbar = () => {
-  const navItem = (
-    <>
-      <li>
-        <Link>Home</Link>
-      </li>
-      <li>
-        <Link>About</Link>
-      </li>
-      <li>
-        <Link>Contact</Link>
-      </li>
-    </>
-  );
+const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+    <div className="px-0 2xl:px-40">
+      <div className="w-full items-center justify-between py-4 px-4 md:px-12">
+        <div className="flex items-center justify-between w-full">
+          <a
+            href="/"
+            className="text-2xl font-bold text-blue-500 cursor-pointer "
           >
-            {navItem}
+            Naimur
+          </a>
+          <ul className="hidden md:flex gap-10 text-lg text-slate-800 dark:text-gray-200">
+            <li className="cursor-pointer hover:text-blue-500">
+              <a href="#home">Home</a>
+            </li>
+            <li className="cursor-pointer hover:text-blue-500">
+              <a href="#about">About</a>
+            </li>
+            <li className="cursor-pointer hover:text-blue-500">
+              <a href="#projects">Projects</a>
+            </li>
           </ul>
+          <button onClick={toggleTheme} className="p-2">
+            {darkMode ? (
+              <FiSun size={24} color={"white"} />
+            ) : (
+              <MdOutlineNightlight size={24} color={"gray"} />
+            )}
+          </button>
+
+          <div className="md:hidden">
+            <button
+              type="button"
+              className=""
+              aria-controls=",onile-menu"
+              aria-expanded="false"
+              onClick={toggleMenu}
+            >
+              <BiMenu
+                size={26}
+                className={`${
+                  isOpen ? "hidden" : "block"
+                } text-gray-700 dark:text-gray-300`}
+              />
+
+              <AiOutlineClose
+                size={26}
+                className={`${
+                  isOpen ? "block" : "hidden"
+                } h-6 w-6 dark:text-gray-400`}
+              />
+            </button>
+          </div>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">
-          <h5>NR</h5>
-        </a>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navItem}</ul>
-      </div>
-      <div className="navbar-end">
-        <a className="btn">Login</a>
+        {/* Mobile Menu */}
+        <div
+          className={`${isOpen ? "block pt-4" : "hidden"} md:hidden`}
+          id="mobile-menu"
+        >
+          <div className="flex flex-col gap-4 text-md text-gray-700 dark:text-neutral-200">
+            <a href="#home" onClick={toggleMenu} className="cursor-pointer">
+              Home
+            </a>
+            <a href="#about" onClick={toggleMenu} className="cursor-pointer">
+              About
+            </a>
+            <a href="#projects" onClick={toggleMenu} className="cursor-pointer">
+              Projects
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
