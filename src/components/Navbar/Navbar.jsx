@@ -12,7 +12,10 @@ const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
             href="/"
             className="text-2xl font-bold text-blue-500 cursor-pointer "
           >
-            Naimur
+            <div className="md:flex  items-center">
+              <img className="w-[50px] h-[42px] mr-1" src="/logo.png" alt="" />
+              <h5 className="text-3xl">Naimur Rahman</h5>
+            </div>
           </a>
           <ul className="hidden md:flex gap-10 text-lg text-slate-800 dark:text-gray-200">
             <li className="cursor-pointer hover:text-blue-500">
