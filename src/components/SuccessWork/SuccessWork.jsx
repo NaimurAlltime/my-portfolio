@@ -1,4 +1,6 @@
 import { projectStats, tools } from "../../../data";
+import ProjectStats from "./ProjectStats";
+import Tool from "./Tool";
 
 const Project = () => {
   return (
@@ -9,16 +11,10 @@ const Project = () => {
         data-aos-delay="50"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
-        className="w-full flex flex-wrap items-center justify-center gap-10 lg:gap-20 pt-10"
+        className="w-full flex flex-wrap items-center justify-center gap-10 lg:gap-24 pt-10"
       >
-        {projectStats.map((p, index) => (
-          <>
-            {index}
-            <div className="flex flex-col gap-2 items-center px-4 py-3 bg-[#0000FF20] rounded-md">
-              <p className="text-white text-2xl font-bold">{p.value}</p>
-              <p className="text-white text-sm">{p.name}</p>
-            </div>
-          </>
+        {projectStats.map((ps, idx) => (
+          <ProjectStats key={idx} ps={ps}></ProjectStats>
         ))}
       </div>
 
@@ -30,14 +26,8 @@ const Project = () => {
         data-aos-easing="ease-in-out"
         className="w-full flex flex-wrap items-center justify-center gap-10 lg:gap-20 mt-16"
       >
-        {tools.map((t, index) => (
-          <>
-            {index}
-            <div className="flex gap-2 items-center bg-white rounded-md shadow-lg px-5 py-1 ">
-              <img src={t.icon} className="w-10 h-10" />
-              <p className=" text-black text-md">{t.name}</p>
-            </div>
-          </>
+        {tools.map((tool, idx) => (
+          <Tool key={idx} tool={tool}></Tool>
         ))}
       </div>
     </div>
