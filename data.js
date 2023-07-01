@@ -1,22 +1,14 @@
-// import {
-//     admin, CSS3,
-//     Express, food,
-//     food1, HTML5,
-//     Javascript,
-//     Mongodb,
-//     Nextjs,
-//     Nextjs2,
-//     Nodejs, port1,
-//     port2,
-//     port3, Python,
-//     Reactjs, social
-// } from "./src/assets";
-
+import Bootstrap from './src/assets/bootstrap.svg';
+import CSS3 from './src/assets/css3.svg';
 import Express from './src/assets/express.svg';
+import Firebase from './src/assets/firebase.svg';
+import HTML5 from './src/assets/html.svg';
+import Javascript from './src/assets/javascript.svg';
 import Mongodb from './src/assets/mongodb.svg';
-import Nextjs2 from './src/assets/nextjs2.svg';
+
 import Nodejs from './src/assets/nodejs.svg';
 import Reactjs from './src/assets/reactjs.svg';
+import Tailwind from './src/assets/tailwind-css.svg';
   
   export const projectStats = [
     {
@@ -55,53 +47,58 @@ import Reactjs from './src/assets/reactjs.svg';
       icon: Nodejs,
     },
     {
-      name: "NextJs",
-      icon: Nextjs2,
+      name: "Firebase",
+      icon: Firebase,
     },
   ];
   
-//   export const skills = [
-//     {
-//       name: "ReactJs",
-//       value: 98,
-//       icon: Reactjs,
-//     },
-//     {
-//       name: "NodeJs",
-//       value: 96,
-//       icon: Nodejs,
-//     },
-//     {
-//       name: "NextJs",
-//       value: 97,
-//       icon: Nextjs,
-//     },
-//     {
-//       name: "MongoDB",
-//       value: 98,
-//       icon: Mongodb,
-//     },
-//     {
-//       name: "CSS3",
-//       value: 98,
-//       icon: CSS3,
-//     },
-//     {
-//       name: "HTML5",
-//       value: 98,
-//       icon: HTML5,
-//     },
-//     {
-//       name: "JavaScript",
-//       value: 88,
-//       icon: Javascript,
-//     },
-//     {
-//       name: "Python",
-//       value: 78,
-//       icon: Python,
-//     },
-//   ];
+  export const skills = [
+    {
+      name: "ReactJs",
+      value: 78,
+      icon: Reactjs,
+    },
+    {
+      name: "NodeJs",
+      value: 46,
+      icon: Nodejs,
+    },
+    {
+      name: "Firebase",
+      value: 67,
+      icon: Firebase,
+    },
+    {
+      name: "MongoDB",
+      value: 58,
+      icon: Mongodb,
+    },
+    {
+      name: "CSS3",
+      value: 82,
+      icon: CSS3,
+    },
+    {
+      name: "HTML5",
+      value: 85,
+      icon: HTML5,
+    },
+    {
+      name: "JavaScript",
+      value: 62,
+      icon: Javascript,
+    },
+    {
+      name: "Bootstrap",
+      value: 86,
+      icon: Bootstrap,
+    },
+    {
+      name: "Tailwind",
+      value: 82,
+      icon: Tailwind,
+    },
+  ];
   
 //   export const projects = [
 //     {
