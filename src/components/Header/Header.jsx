@@ -53,8 +53,8 @@ const Header = () => {
 
         <div className="mt-10 flex gap-10">
           <button className="bg-orange-700 flex items-center text-lg text-white font-semibold rounded-md py-3 px-5">
-            <BiDownload className="mr-2" />
             Download Resume
+            <BiDownload className="ml-2" />
           </button>
         </div>
       </div>

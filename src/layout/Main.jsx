@@ -1,10 +1,15 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useState } from "react";
 import Footer from "../components/Footer/Footer";
 import About from "./../components/About/About";
 import Header from "./../components/Header/Header";
 import Navbar from "./../components/Navbar/Navbar";
+import Project from "./../components/Project/Project";
 import Skills from "./../components/Skills/Skills";
 import SuccessWork from "./../components/SuccessWork/SuccessWork";
+
+AOS.init();
 
 const Main = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -51,6 +56,13 @@ const Main = () => {
           className="w-full px-0 lg:px-5 2xl:px-40 py-10 lg:py-0 dark:bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c]"
         >
           <Skills />
+        </section>
+
+        <section
+          id="projects"
+          className="w-full px-0 lg:px-5 2xl:px-40 py-10 lg:py-0 dark:bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#030a1c] to-[#05174e]"
+        >
+          <Project />
         </section>
 
         <div className="w-full px-0 lg:px-5 2xl:px-40 py-10 lg:py-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c] ">
