@@ -78,8 +78,14 @@ const Navbar = ({ darkMode, isOpen, toggleMenu, toggleTheme }) => {
             <a href="#about" onClick={toggleMenu} className="cursor-pointer">
               About
             </a>
+            <a href="#skills" onClick={toggleMenu} className="cursor-pointer">
+              Skills
+            </a>
             <a href="#projects" onClick={toggleMenu} className="cursor-pointer">
               Projects
+            </a>
+            <a href="#contact" onClick={toggleMenu} className="cursor-pointer">
+              Contact
             </a>
           </div>
         </div>
