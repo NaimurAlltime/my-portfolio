@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import img from "../../assets/contact.png";
-// import email from "../../assets/email.png";
 
 const Contact = () => {
   const form = useRef();
@@ -89,12 +88,7 @@ const Contact = () => {
         </div>
 
         <div className="md:w-1/2">
-          {/* <Player src="contact.json" loop autoplay /> */}
           <img src={img} alt="" />
-          {/* <div className="flex gap2 items-center dark:text-white">
-            <img className="w-[27px]" src={email} alt="" />
-            <p>naimur2231@gmail.com</p>
-          </div> */}
         </div>
       </div>
     </div>
