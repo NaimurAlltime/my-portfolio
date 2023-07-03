@@ -5,6 +5,7 @@ import Nodejs from "../../assets/nodejs.svg";
 import Profile from "../../assets/profile1.png";
 import Reactjs from "../../assets/reactjs.svg";
 import Redux from "../../assets/redux.svg";
+import resumePdf from "/Resume of Naimur Rahman.pdf";
 const Header = () => {
   return (
     <div className="w-full flex items-center flex-col lg:flex-row px-4 md:px-10 gap-10 2xl:gap-20 py-20">
@@ -20,10 +21,6 @@ const Header = () => {
           I Am Naimur Rahman ____
         </span>
         <div className="flex gap-4 items-center my-4">
-          {/* <h1 className="text-gray-800 dark:text-neutral-100 text-4xl md:text-5xl 2xl:text-7xl font-bold text-center">
-            I am a
-          </h1> */}
-          {/* dark:text-[#224cff] */}
           <div className="flex items-center justify-center text-slate-700 shadow-lg  dark:bg-[#224cff10] dark:text-neutral-100 rounded-full">
             {/* "Full Stack Developer" */}
             <Typed
@@ -42,20 +39,19 @@ const Header = () => {
           </div>
         </div>
 
-        {/* <h1 className="text-5xl 2xl:text-7xl font-extrabold text-black dark:text-neutral-100 tracking-wider">
-          CodeWave
-        </h1> */}
-
         <p className="text-md text-black dark:text-gray-100 mt-5 2xl:mt-7">
           Full-Stack Web Developer with ability to learn and collaborate in
           rapidly changing environments and compositions.
         </p>
 
         <div className="mt-10 flex gap-10">
-          <button className="bg-orange-700 flex items-center text-lg text-white font-semibold rounded-md py-3 px-5">
-            Download Resume
-            <BiDownload className="ml-2" />
-          </button>
+          <a
+            className="bg-orange-700 flex items-center text-lg text-white font-semibold rounded-md py-3 px-5"
+            href={resumePdf}
+            download
+          >
+            Download Resume <BiDownload className="ml-2" />
+          </a>
         </div>
       </div>
 

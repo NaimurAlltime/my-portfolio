@@ -1,8 +1,8 @@
 import { BsArrowUpRightCircleFill, BsGithub } from "react-icons/bs";
 import { FcApproval } from "react-icons/fc";
-import Project2 from "../../assets/project/project-2.png";
-import Project1 from "../../assets/project/project-one.png";
-import Project3 from "../../assets/project/project-three.png";
+import Project1 from "../../assets/project/project-fullpage1.png";
+import Project2 from "../../assets/project/project-fullpage2.png";
+import Project3 from "../../assets/project/project-fullpage3.png";
 
 const Project = () => {
   return (
@@ -94,7 +94,12 @@ const Project = () => {
           </div>
         </div>
         <div className="md:w-1/2 cursor-pointer hover:scale-110 ease-in-out duration-300">
-          <img className="w-full h-[380px] rounded-md" src={Project1} alt="" />
+          <figure className="w-full h-[380px] overflow-hidden rounded-md">
+            <img
+              src={Project1}
+              className="w-full transition-transform duration-[10000ms] hover:-translate-y-[80%]"
+            />
+          </figure>
         </div>
       </div>
       <div
@@ -106,7 +111,12 @@ const Project = () => {
         className="flex flex-col-reverse md:flex-row-reverse items-center w-full gap-10 mb-12"
       >
         <div className="md:w-1/2 cursor-pointer hover:scale-110 ease-in-out duration-300">
-          <img className="w-full h-[380px] rounded-md" src={Project2} alt="" />
+          <figure className="w-full h-[380px] overflow-hidden rounded-md">
+            <img
+              src={Project2}
+              className="w-full transition-transform duration-[10000ms] hover:-translate-y-[80%]"
+            />
+          </figure>
         </div>
         <div className="text-black dark:text-white md:w-1/2">
           <h2 className="text-3xl font-semibold">Toy Trackers</h2>
@@ -265,7 +275,12 @@ const Project = () => {
           </div>
         </div>
         <div className="md:w-1/2 cursor-pointer hover:scale-110 ease-in-out duration-300">
-          <img className="w-full h-[380px] rounded-md" src={Project3} alt="" />
+          <figure className="w-full h-[380px] overflow-hidden rounded-md">
+            <img
+              src={Project3}
+              className="w-full transition-transform duration-[10000ms] hover:-translate-y-[80%]"
+            />
+          </figure>
         </div>
       </div>
     </div>
